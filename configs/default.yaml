@@ -1,0 +1,49 @@
+# Default configuration for hierarchical forecasting
+
+# Experiment settings
+experiment_name: hierarchical_forecasting_default
+seed: 42
+
+# Data settings
+data_dir: data/m5
+num_items: 100
+num_days: 1000
+lookback_window: 28
+forecast_horizon: 7
+detect_changepoints: true
+
+# Data split
+train_ratio: 0.7
+test_ratio: 0.2
+
+# Model architecture
+input_dim: 1
+calendar_dim: 3
+hidden_dim: 64
+num_layers: 2
+num_attention_heads: 4
+dropout: 0.1
+
+# Hierarchical reconciliation
+enable_pruning: true
+target_pruning_ratio: 0.4
+
+# Loss function
+coherence_weight: 0.3
+forecast_weight: 0.7
+use_rmsse: true
+
+# Training settings
+batch_size: 32
+num_epochs: 50
+learning_rate: 0.001
+weight_decay: 0.0001
+gradient_clip: 1.0
+
+# Early stopping
+patience: 10
+min_delta: 0.0001
+
+# Paths
+checkpoint_dir: checkpoints
+results_dir: results
