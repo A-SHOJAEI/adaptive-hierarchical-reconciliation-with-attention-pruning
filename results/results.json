@@ -1,0 +1,19 @@
+{
+  "project": "Adaptive Hierarchical Reconciliation with Attention Pruning",
+  "dataset": "M5-style hierarchical sales data (synthetic)",
+  "model": "Temporal CNN + LSTM with Attention Reconciliation",
+  "training": {
+    "num_epochs": 18,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "early_stopping_patience": 10
+  },
+  "metrics": {
+    "final_train_loss": 0.6754,
+    "final_val_loss": 0.6862,
+    "best_val_loss": 0.6859,
+    "pruning_ratio": 0.40,
+    "final_train_forecast_loss": 0.9649,
+    "final_val_forecast_loss": 0.9803
+  }
+}
